@@ -1,0 +1,29 @@
+<button md-fab (click)="new()">
+  <md-icon>add</md-icon>
+</button>
+<app-admin-course-new
+  *ngIf="_new"
+  [university]="university"
+  (create)="create($event)"
+  (cancel)="new($event)"
+>
+</app-admin-course-new>
+
+<app-admin-course-list
+  *ngIf="showList"
+  [university]="university"
+  [collectionName]="collectionName"
+  [resourceResponseCollection]="resourceResponseCollection"
+  (select)="select($event)">
+</app-admin-course-list>
+
+
+<app-admin-course-show
+  *ngIf="hasItemSelected"
+  [university]="university"
+  [persistible]="persistible"
+  [resourceResponse]="resourceResponseSelected"
+  (back)="deselect($event)"
+  (update)="update($event)"
+  (remove)="remove($event)">
+</app-admin-course-show>

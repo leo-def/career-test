@@ -1,0 +1,15 @@
+<md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Nova Personalidade</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <app-admin-area-form
+      [(resourceResponse)]="resourceResponse">
+    </app-admin-area-form>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button (click)="emitCancel($event)">Cancelar</button>
+    <button md-button (click)="emitCreate(resourceResponse)">Salvar</button>
+  </md-card-actions>
+</md-card>

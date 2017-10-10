@@ -1,0 +1,7 @@
+
+<app-student-user-header *ngIf="isAuthenticated; else public"></app-student-user-header>
+
+<ng-template #public>
+        <app-student-public-header></app-student-public-header>
+</ng-template>
+<router-outlet></router-outlet>

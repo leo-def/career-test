@@ -1,0 +1,1 @@
+	1° execute file "softwares/redis3.2/redis-server"

@@ -1,0 +1,65 @@
+<md-toolbar color="primary">
+    <span>Painel Administrativo</span>
+    <span class="spacer"></span>
+    <!--<button md-icon-button>
+      <md-icon>more_vert</md-icon>
+    </button>-->
+	
+	<button md-button [md-menu-trigger-for]="menu">Menu</button>
+	<md-menu #menu="mdMenu">
+		<button 
+			md-menu-item 
+			routerLink="/admin/appraisal-type" 
+			routerLinkActive="active">
+			Questionários
+		</button>
+		<button 
+			  md-menu-item 
+			  routerLink="/admin/area" 
+			  routerLinkActive="active">
+			Areas de Atuação
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/course" 
+			  routerLinkActive="active">
+			Cursos
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/personality" 
+			  routerLinkActive="active">
+			Personalidades
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/profession" 
+			  routerLinkActive="active">
+			Profissão
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/question" 
+			  routerLinkActive="active">
+			Questões
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/question-rule" 
+			  routerLinkActive="active">
+			  Regras de Questões
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/student" 
+			  routerLinkActive="active">
+			  Estudantes
+		  </button>
+		  <button 
+			  md-menu-item 
+			  routerLink="/admin/university" 
+			  routerLinkActive="active">
+			  Universidades
+		  </button>
+	</md-menu>
+</md-toolbar>

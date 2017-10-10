@@ -1,0 +1,35 @@
+<md-toolbar color="primary">
+    <span>Bem Vindo</span>
+    <span class="spacer"></span>
+
+	<button md-button [md-menu-trigger-for]="menu">Menu</button>
+	<md-menu #menu="mdMenu">
+		<button 
+			md-menu-item 
+			routerLink="/student/" 
+			routerLinkActive="active">
+			Dashboard
+		</button>
+		
+		<button 
+			md-menu-item 
+			routerLink="/student/history" 
+			routerLinkActive="active">
+			Historico
+		</button>
+		
+		<button 
+			md-menu-item 
+			routerLink="/student/profile" 
+			routerLinkActive="active">
+			Perfil
+		</button>
+		
+		<button 
+			md-menu-item
+			routerLink="/student/account/logout" 
+			routerLinkActive="active">
+			Logout
+		</button>
+	</md-menu>
+</md-toolbar>

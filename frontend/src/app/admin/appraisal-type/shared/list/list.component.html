@@ -1,0 +1,9 @@
+<md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile
+      *ngFor="let item of _collection"
+      [colspan]="1"
+      [rowspan]="1"
+	  (click)="selectItem(item)" >
+    <b>{{item.title}}</b> - <i>{{item.code}}</i>
+  </md-grid-tile>
+</md-grid-list>

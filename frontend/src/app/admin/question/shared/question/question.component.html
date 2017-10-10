@@ -1,0 +1,29 @@
+<button md-fab (click)="new()">
+  <md-icon>add</md-icon>
+</button>
+<app-admin-question-new
+  *ngIf="_new"
+  [appraisalType]="appraisalType"
+  (create)="create($event)"
+  (cancel)="new($event)"
+>
+</app-admin-question-new>
+
+<app-admin-question-list
+  *ngIf="showList"
+  [appraisalType]="appraisalType"
+  [collectionName]="collectionName"
+  [resourceResponseCollection]="resourceResponseCollection"
+  (select)="select($event)">
+</app-admin-question-list>
+
+
+<app-admin-question-show
+  *ngIf="hasItemSelected"
+  [appraisalType]="appraisalType"
+  [persistible]="persistible"
+  [resourceResponse]="resourceResponseSelected"
+  (back)="deselect($event)"
+  (update)="update($event)"
+  (remove)="remove($event)">
+</app-admin-question-show>

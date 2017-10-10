@@ -1,0 +1,22 @@
+<h3>Login</h3>
+<!--(ngSubmit)="send(form)"-->
+<form [formGroup]="_form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput formControlName="username" type="text" placeholder="Usuário">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput formControlName="password" type="password" placeholder="Senha">
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<button md-raised-button color="primary" (click)="login($event)">Login</button>

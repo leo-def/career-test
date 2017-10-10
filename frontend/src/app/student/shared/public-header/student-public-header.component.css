@@ -1,0 +1,8 @@
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .transparent{
+    background-color: rgba(0,0,0,.6);/* transparent !important;*/
+    
+  }

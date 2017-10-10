@@ -1,0 +1,35 @@
+<div class="fullscreen-bg">
+  <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+    <source src="assets/student/video/grass.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div fxLayout="row" class="content">
+
+  <div fxFlex="10%" fxShow.gt-md></div>
+
+  <md-card fxFlex.gt-md="40%" fxFlex.st-md="100%" fxLayout="column">
+
+    <h3>Login</h3>
+
+    <form [formGroup]="_form" fxLayout="column">
+ 
+      <md-input-container class="example-full-width">
+        <input mdInput formControlName="username" type="text" placeholder="Usuário">
+      </md-input-container>
+
+      <md-input-container class="example-full-width">
+        <input mdInput formControlName="password" type="password" placeholder="Senha">
+      </md-input-container>
+
+    </form>
+
+    <button md-button md-raised-button color="accent" (click)="login($event)">
+          Enviar
+      </button>
+
+  </md-card>
+
+  <div fxFlex="60%" fxShow.gt-md></div>
+
+</div>

@@ -1,0 +1,56 @@
+<div class="fullscreen-bg">
+	<video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+		<source src="assets/student/video/grass.mp4" type="video/mp4">
+	</video>
+</div>
+<div fxLayout="row" class="content">
+
+	<div fxFlex="10%" fxShow.gt-md></div>
+
+	<md-card fxFlex.gt-md="40%" fxFlex.st-md="100%" fxLayout="column">
+		<h3>Cadastre-se</h3>
+		<form [formGroup]="_form" fxLayout="column">
+
+			<md-input-container>
+				<input mdInput formControlName="name" type="text" placeholder="Nome">
+			</md-input-container>
+
+			<md-input-container>
+				<input mdInput formControlName="email" type="email" email placeholder="Email">
+			</md-input-container>
+
+			<div fxLayout.gt-md="row" fxLayout.st-md="column">
+				<md-input-container>
+					<input mdInput formControlName="password" type="password" placeholder="password">
+				</md-input-container>
+
+				<md-input-container>
+					<input mdInput formControlName="confirmPassword" type="password" placeholder="confirmPassword">
+				</md-input-container>
+			</div>
+
+			<md-form-field>
+				<input mdInput [mdDatepicker]="picker" placeholder="Data de Nascimento" [(ngModel)]="birthDate" [ngModelOptions]="{standalone: true}">
+				<md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+				<md-datepicker #picker></md-datepicker>
+			</md-form-field>
+
+		</form>
+
+		<button 
+			md-button 
+			md-raised-button
+			color="accent" 
+			(click)="register($event)">
+   			Enviar
+		</button>
+
+		<h5>
+			<a routerLink="/student/account/forgot-password" routerLinkActive="active">
+				Esqueci minha senha
+			</a>
+		</h5>
+	</md-card>
+
+	<div fxFlex="60%" fxShow.gt-md></div>
+</div>

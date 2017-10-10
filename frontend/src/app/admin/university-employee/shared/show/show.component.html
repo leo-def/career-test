@@ -1,0 +1,38 @@
+<md-card class="example-card">
+  <md-card-header>
+	
+    <!--<div md-card-avatar class="example-header-image"></div>-->
+    <md-card-title><md-icon (click)="emitBack()">reply</md-icon> {{resourceResponse.id}}</md-card-title>
+  </md-card-header>
+  
+  <!--<img md-card-image src="assets/img/examples/shiba2.jpg">-->
+
+	<!-- resume-content -->
+	<md-card-content class="resume-content" *ngIf="!_edit">
+		<p>
+		  {{resourceResponse.type}}
+		</p>
+	 </md-card-content>
+  
+	<!-- edit-content -->
+  <app-admin-university-employee-form 
+      class="edit-content" 
+      *ngIf="_edit"
+      [university]="university"
+      [(resourceResponse)]="resourceResponse">
+	</app-admin-university-employee-form>
+  
+  <!-- resume-actions -->
+  <md-card-actions class="resume-actions" *ngIf="!_edit">
+    <button md-button (click)="edit($event)">Editar</button>
+    <button md-button (click)="emitRemove(resourceResponse)">Remover</button>
+	
+  </md-card-actions >
+  <!-- edit-actions -->
+  <md-card-actions class="edit-actions" *ngIf="_edit">
+    <button md-button (click)="cancelEdit($event)">Cancelar</button>
+    <button md-button (click)="emitUpdate(resourceResponse)">Salvar</button>
+    <button md-button (click)="emitRemove(resourceResponse)">Remover</button>
+  </md-card-actions>
+  
+</md-card>

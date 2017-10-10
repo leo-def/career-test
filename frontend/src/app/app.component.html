@@ -1,0 +1,8 @@
+<router-outlet></router-outlet>
+<md-progress-spinner
+    *ngIf="_showProgress"
+    class="example-margin"
+    [color]="progressConfig.color"
+    [mode]="progressConfig.mode"
+    [value]="progressConfig.value">
+</md-progress-spinner>

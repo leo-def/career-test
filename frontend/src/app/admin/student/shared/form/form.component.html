@@ -1,0 +1,51 @@
+
+<!--(ngSubmit)="send(form)"-->
+<form  [formGroup]="_form">
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input
+            mdInput
+            formControlName="nickname"
+            type="text"
+            placeholder="nickname">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input
+            mdInput
+            formControlName="imageURL"
+            type="text"
+            placeholder="imageURL">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+        <td>
+            <md-input-container class="example-full-width">
+              <input
+                mdInput
+                formControlName="accountId"
+                type="number">
+            </md-input-container>
+        </td>
+		<td>
+			<md-slide-toggle
+				  [(checked)]="reachable">
+				reachable
+			</md-slide-toggle>
+		</td>
+    </tr>
+</table>
+
+</form>
+<!--"title" : "Arquiteto",
+      "" : "Pensadores criativos e estratégicos, com um plano para tudo.",
+      "image" : null,
+      "type" : "Analistas",
+      "code" : "INTJ (-A/-T)",-->

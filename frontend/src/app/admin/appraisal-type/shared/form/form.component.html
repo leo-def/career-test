@@ -1,0 +1,46 @@
+
+<!--(ngSubmit)="send(form)"-->
+<form  [formGroup]="_form">
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input
+            mdInput
+            formControlName="title"
+            type="text"
+            placeholder="Title" >
+        </md-input-container>
+      </td>
+	</tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input
+            mdInput
+            formControlName="description"
+            type="text"
+            placeholder="description">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input
+            mdInput
+            formControlName="image"
+            type="text"
+            placeholder="image">
+        </md-input-container>
+      </td>
+    </tr>
+</table>
+
+</form>
+<!--"title" : "Arquiteto",
+      "" : "Pensadores criativos e estratégicos, com um plano para tudo.",
+      "image" : null,
+      "type" : "Analistas",
+      "code" : "INTJ (-A/-T)",-->
